@@ -1,4 +1,4 @@
-            /*....A small program to save and organize your tasks....*/
+/*....A small program to save and organize your tasks....*/
 
 
 #include <iostream>
@@ -59,7 +59,7 @@ public:
 };
 //....[...Part Two: Main Function Dealing with the user interface...]....
 int main() {
-   Class_ToDoList To_do_list; // create an interface of the to do list class
+    Class_ToDoList To_do_list; // create an interface of the to do list class
 
     while (true) {
         cout << "\n===== TO-DO LIST =====" << endl;
@@ -70,36 +70,36 @@ int main() {
         cout << "5. Exit" << endl;
 
         int choice;
-       cout << "Enter your choice: ";
-       cin >> choice;
+        cout << "Enter your choice: ";
+        cin >> choice;
 
         switch (choice) {
-        case 1: {
-            string task;
-            cout << "Enter the task: ";
-            cin.ignore(); // ignore the previous input
-            getline(cin, task);// read the task from user
-            To_do_list.addTask(task);
-            break;
-        }
-        case 2: {
-            int index;
-            cout << "Enter the index of the task to complete: ";
-            cin >> index;
-            To_do_list.completeTask(index - 1);// complete a task
-            break;
-        }
-        case 3:
-            To_do_list.viewUncompletedTasks(); // view all uncompleted tasks
-            break;
-        case 4:
-            To_do_list.viewCompletedTasks(); // view all completed tasks
-            break;
-        case 5:
-            cout << "Exiting..." << endl;// Exit  the program
-            return 0;
-        default:
-            cout << "Invalid choice" << endl;// message for invalid choice
+            case 1: {
+                string task;
+                cout << "Enter the task: ";
+                cin.ignore(); // ignore the previous input
+                getline(cin, task);// read the task from user
+                To_do_list.addTask(task);
+                break;
+            }
+            case 2: {
+                int index;
+                cout << "Enter the index of the task to complete: ";
+                cin >> index;
+                To_do_list.completeTask(index - 1);// complete a task
+                break;
+            }
+            case 3:
+                To_do_list.viewUncompletedTasks(); // view all uncompleted tasks
+                break;
+            case 4:
+                To_do_list.viewCompletedTasks(); // view all completed tasks
+                break;
+            case 5:
+                cout << "Exiting..." << endl;// Exit  the program
+                return 0;
+            default:
+                cout << "Invalid choice" << endl;// message for invalid choice
         }
     }
 }
